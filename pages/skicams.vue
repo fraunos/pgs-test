@@ -18,12 +18,14 @@ export default {
   },
   data() {
     return {
-      skicams: []
+      skicams: null,
+      filter: ['Andalo', 'Monte Bondone']
     }
   },
   computed: {
-    skicamsFiltered () {
-      return this.skicams.filter((item) => item.name === "Andalo" || item.name === "Monte Bondone" ? true : false)
+    skicamsFiltered() {
+      // return this.skicams.filter((item) => this.filter.indexOf(item.name) > -1 ? true : false)
+      return this.skicams.slice(0, 10)
     }
   },
   methods: {
