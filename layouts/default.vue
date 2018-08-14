@@ -21,12 +21,15 @@ export default {
 @import url('https://fonts.googleapis.com/css?family=Roboto');
 
 html, body {
-  width: 100vw;
+  width: 100%;
   min-height: 100vh;
   background: #f8f8f8;
 }
-#__nuxt, #__layout, .main{
+body > div{
   height: 100%;
+}
+.main{
+  min-height: 100vh;
 }
 div{
   width: 100%;
@@ -61,5 +64,9 @@ section {
   justify-content: center;
   align-items: center;
   min-height: 100%;
+  flex: 1 1 auto;
+}
+a{
+  outline: none;
 }
 </style>
