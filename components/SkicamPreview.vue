@@ -28,8 +28,33 @@ export default {
 </script>
 
 <style>
-img {
-  height: 200px;
-  width: 200px;
+.skicam {
+  background: white;
+  width: 48%;
+  margin: 1%;
+  height: auto;
+  text-align: right;
+  /* margin: 1%; */
+  box-shadow: 0px 1px 4px #0003;
+  border-radius: .2em;
+}
+.skicam .date {
+  padding: .5em .5em 0 .5em;
+  color: #0005;
+  font-size: 90%;
+}
+.skicam img {
+  width: 100%;
+  height: auto;
+}
+
+.skicam h1 {
+  text-align: center;
+  margin-bottom: .5em;
+}
+
+.desc {
+  background: white;
+  padding: 2em 1em;
 }
 </style>
