@@ -24,8 +24,8 @@ export default {
   },
   computed: {
     skicamsFiltered() {
-      // return this.skicams.filter((item) => this.filter.indexOf(item.name) > -1 ? true : false)
-      return this.skicams.slice(0, 10)
+      return this.skicams.filter((item) => this.filter.indexOf(item.name) > -1 ? true : false)
+      // return this.skicams.slice(0, 10)
     }
   },
   methods: {
