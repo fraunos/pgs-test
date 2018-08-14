@@ -9,9 +9,10 @@ export default {
   props: ['skicam'],
   created() {
     this.skicam.cams = Object.keys(this.skicam.cams).map(key => this.skicam.cams[key])
+    let self = this
     setInterval(function () {
-      this.counter++
-    }, 500)
+      self.counter++
+    }, 5000)
   },
   data() {
     return {
