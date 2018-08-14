@@ -1,27 +1,40 @@
 <template>
 <div class="skicam">
-  {{skicam.name}}
-  <img :src="currentImage" alt="">
+  <div class="date">{{currentDate}}</div>
+  <h1>
+    {{skicam.name}}
+  </h1>
+  <!-- <div class="img" :style="`background-image: url(${currentImage});`"></div> -->
+  <img :src="currentImage" alt="" @mouseenter="hover=true" @mouseleave="hover=false">
 </div>
 </template>
+
 <script>
+import moment from 'moment'
+
 export default {
   props: ['skicam'],
   created() {
     this.skicam.cams = Object.keys(this.skicam.cams).map(key => this.skicam.cams[key])
     let self = this
     setInterval(function () {
-      self.counter++
-    }, 5000)
+      if (self.hover) {
+        self.counter++
+      }
+    }, 1000)
   },
   data() {
     return {
-      counter: 0
+      counter: 0,
+      hover: false
     }
   },
   computed: {
     currentImage() {
       return this.skicam.cams[this.counter % this.skicam.cams.length].url
+    },
+    currentDate() {
+      return moment().format('DD-MM-YYYY');
     }
   }
 }
