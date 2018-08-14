@@ -1,8 +1,8 @@
 <template>
 <section class="container">
-    <div class="skicams" v-if="skicams">
-      <skicam-preview v-for="(skicam, index) in skicamsFiltered" :key="index" :skicam="skicam"></skicam-preview>
-    </div>
+  <div class="skicams" v-if="skicams">
+    <skicam-preview v-for="(skicam, index) in skicamsFiltered" :key="index" :skicam="skicam"></skicam-preview>
+  </div>
 </section>
 </template>
 
@@ -42,10 +42,10 @@ export default {
 </script>
 
 <style>
-  .skicams{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+.skicams {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 </style>

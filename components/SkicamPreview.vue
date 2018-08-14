@@ -47,15 +47,16 @@ export default {
   margin: 1%;
   height: auto;
   text-align: right;
-  /* margin: 1%; */
   box-shadow: 0px 1px 4px #0003;
   border-radius: .2em;
 }
+
 .skicam .date {
   padding: .5em .5em 0 .5em;
   color: #0005;
   font-size: 90%;
 }
+
 .skicam img {
   width: 100%;
   height: auto;

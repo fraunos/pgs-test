@@ -1,23 +1,22 @@
 <template>
-  <header class="">
-    <div class="container">
-      <div class="logo">
-        LOGO
-      </div>
-      <nav>
-        <div>
-          <nuxt-link v-for="(route, index) in routes" :key="index" :to="route.url">{{route.name}}</nuxt-link>
-        </div>
-      </nav>
+<header class="">
+  <div class="container">
+    <div class="logo">
+      LOGO
     </div>
-  </header>
+    <nav>
+      <div>
+        <nuxt-link v-for="(route, index) in routes" :key="index" :to="route.url">{{route.name}}</nuxt-link>
+      </div>
+    </nav>
+  </div>
+</header>
 </template>
 <script>
 export default {
-  data () {
+  data() {
     return {
-      routes: [
-        {
+      routes: [{
           name: 'About us',
           url: '/'
         },
@@ -36,7 +35,7 @@ export default {
 </script>
 
 <style scoped>
-header{
+header {
   width: 100%;
   height: 100%;
   font-size: 1.6vh;
@@ -50,27 +49,34 @@ header{
   margin-bottom: 3em;
   background: white;
 }
-nav div{
+
+nav div {
   height: 100%;
   padding-bottom: .5em;
   box-sizing: content-box;
 }
+
 nav a {
   margin-right: 4.2em;
   padding-bottom: .5em;
   text-decoration: none;
 }
-nav a:last-child{
+
+nav a:last-child {
   margin-right: 0;
 }
-a, a:active{
+
+a,
+a:active {
   color: #0009;
 }
-.nuxt-link-exact-active{
+
+.nuxt-link-exact-active {
   color: #fa8a23ff;
   border-bottom: solid .2em #fa8a23ff;
 }
-.logo{
+
+.logo {
   font-size: 4.8em;
   height: 2em;
 }
